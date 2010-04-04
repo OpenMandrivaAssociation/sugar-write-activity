@@ -2,21 +2,21 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-write-activity
-Version: 68
+Version: 69
 Release: %mkrel 1
 Summary: Word processor for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/Write/Write-68.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/Write/Write-69.tar.bz2
 
-Requires: abiword >= 2.7
+Requires: abiword >= 2.8
 Requires: python-abiword  
-Requires: sugar-toolkit >= 0.86.1
+Requires: sugar-toolkit >= 0.88.0
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.86.0
+BuildRequires: sugar-toolkit >= 0.88.0
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -25,7 +25,7 @@ BuildArch: noarch
 The Write activity provides a word processor for the Sugar interface.
 
 %prep
-%setup -q -n Write-68
+%setup -q -n Write-69
 
 
 %build
