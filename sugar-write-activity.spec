@@ -3,7 +3,7 @@
 
 Name: sugar-write-activity
 Version: 69
-Release: %mkrel 2
+Release: 3
 Summary: Word processor for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
@@ -18,7 +18,6 @@ Requires: sugar-toolkit >= 0.88.0
 BuildRequires: gettext  
 BuildRequires: sugar-toolkit >= 0.88.0
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 %description
@@ -34,16 +33,55 @@ rm -f MANIFEST
 python setup.py build
 
 %install
-rm -rf %{buildroot}
 python setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.AbiWordActivity
-
-%clean
-rm -rf %{buildroot}
 
 %files -f org.laptop.AbiWordActivity.lang
 %defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc NEWS
+
+
+
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 69-2mdv2011.0
++ Revision: 615039
+- the mass rebuild of 2010.1 packages
+
+* Sun Apr 04 2010 Aleksey Lim <alsroot@mandriva.org> 69-1mdv2010.1
++ Revision: 531171
+- Sucrose 0.88.0 release
+
+* Mon Oct 12 2009 Aleksey Lim <alsroot@mandriva.org> 68-1mdv2010.0
++ Revision: 456983
+- Push 68
+
+* Sat Sep 19 2009 Aleksey Lim <alsroot@mandriva.org> 67-1mdv2010.0
++ Revision: 444551
+- Update to 67
+
+* Tue Aug 11 2009 Aleksey Lim <alsroot@mandriva.org> 65-1mdv2010.0
++ Revision: 414978
+- Sucrose 0.85.2
+
+* Wed Mar 04 2009 Aleksey Lim <alsroot@mandriva.org> 63-1mdv2009.1
++ Revision: 348323
+- Sucrose 0.84.0 release
+
+* Mon Feb 23 2009 Aleksey Lim <alsroot@mandriva.org> 62-1mdv2009.1
++ Revision: 344239
+- Sucrose 0.83.6 release
+
+* Sun Feb 15 2009 Aleksey Lim <alsroot@mandriva.org> 61-2mdv2009.1
++ Revision: 340405
+- #47343 sugar-write-activity hangs and never starts up
+
+* Tue Jan 20 2009 Aleksey Lim <alsroot@mandriva.org> 61-1mdv2009.1
++ Revision: 332009
+- new Sucrose 0.83.4 release
+
+* Sun Jan 11 2009 Aleksey Lim <alsroot@mandriva.org> 60-1mdv2009.1
++ Revision: 328413
+- initial commit
 
