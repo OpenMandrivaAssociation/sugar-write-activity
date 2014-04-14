@@ -12,7 +12,7 @@ Url: http://sugarlabs.org/
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Write/Write-%{version}.tar.bz2
 
 Requires: abiword >= 2.8
-Requires: python-abiword  
+Requires: python-gi  
 Requires: sugar-toolkit-gtk3 >= 0.88.0
 
 BuildRequires: gettext  
