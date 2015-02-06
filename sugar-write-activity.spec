@@ -3,7 +3,7 @@
 
 Name: sugar-write-activity
 Version: 94
-Release: 1
+Release: 2
 Summary: Word processor for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
